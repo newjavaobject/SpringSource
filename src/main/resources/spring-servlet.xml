@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd">
+       xmlns:my="http://www.czy.org/schema/user"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+       					   http://www.czy.org/schema/user http://www.czy.org/schema/user.xsd">
 
        <bean id="test" class="com.czy.spring.source.Test"></bean>
+<!--        <my:user id="uu" name="testName" email="eeemmmaaaiiilll" /> -->
 </beans>

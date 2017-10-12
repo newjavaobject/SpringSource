@@ -4,6 +4,8 @@ import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.xml.XmlBeanFactory;
 import org.springframework.core.io.ClassPathResource;
 
+import com.czy.spring.source.zdy.User;
+
 /** 
 * @author: 
 * @version:  
@@ -16,5 +18,8 @@ public class SpringTest {
 		BeanFactory bf = new XmlBeanFactory(new ClassPathResource("spring-servlet.xml"));
 		Test test = bf.getBean(Test.class);
 		System.out.println(test.getTest());
+		
+//		User user = (User) bf.getBean("uu");
+//		System.out.println(user.getEmail());
 	}
 }
