@@ -6,7 +6,7 @@ package com.czy.spring.source;
 * @since：2017年10月11日 下午11:50:05
 * 类说明:
 */
-public class Test {
+public class Test1 {
 	private String test = "ttttt";
 
 	public String getTest() {

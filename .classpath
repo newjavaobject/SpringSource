@@ -24,5 +24,27 @@
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="D:/tomcat7.0.72/apache-tomcat-7.0.72/lib/annotations-api.jar"/>
+	<classpathentry kind="lib" path="D:/tomcat7.0.72/apache-tomcat-7.0.72/lib/catalina.jar" sourcepath="C:/Users/Administrator/Desktop/tomca7源码.zip"/>
+	<classpathentry kind="lib" path="D:/tomcat7.0.72/apache-tomcat-7.0.72/lib/catalina-ant.jar"/>
+	<classpathentry kind="lib" path="D:/tomcat7.0.72/apache-tomcat-7.0.72/lib/catalina-ha.jar"/>
+	<classpathentry kind="lib" path="D:/tomcat7.0.72/apache-tomcat-7.0.72/lib/catalina-tribes.jar"/>
+	<classpathentry kind="lib" path="D:/tomcat7.0.72/apache-tomcat-7.0.72/lib/ecj-4.4.2.jar"/>
+	<classpathentry kind="lib" path="D:/tomcat7.0.72/apache-tomcat-7.0.72/lib/el-api.jar"/>
+	<classpathentry kind="lib" path="D:/tomcat7.0.72/apache-tomcat-7.0.72/lib/jasper.jar"/>
+	<classpathentry kind="lib" path="D:/tomcat7.0.72/apache-tomcat-7.0.72/lib/jasper-el.jar"/>
+	<classpathentry kind="lib" path="D:/tomcat7.0.72/apache-tomcat-7.0.72/lib/jsp-api.jar" sourcepath="C:/Users/Administrator/Desktop/tomca7源码.zip"/>
+	<classpathentry kind="lib" path="D:/tomcat7.0.72/apache-tomcat-7.0.72/lib/servlet-api.jar" sourcepath="C:/Users/Administrator/Desktop/tomca7源码.zip"/>
+	<classpathentry kind="lib" path="D:/tomcat7.0.72/apache-tomcat-7.0.72/lib/tomcat7-websocket.jar"/>
+	<classpathentry kind="lib" path="D:/tomcat7.0.72/apache-tomcat-7.0.72/lib/tomcat-api.jar"/>
+	<classpathentry kind="lib" path="D:/tomcat7.0.72/apache-tomcat-7.0.72/lib/tomcat-coyote.jar"/>
+	<classpathentry kind="lib" path="D:/tomcat7.0.72/apache-tomcat-7.0.72/lib/tomcat-dbcp.jar"/>
+	<classpathentry kind="lib" path="D:/tomcat7.0.72/apache-tomcat-7.0.72/lib/tomcat-i18n-es.jar"/>
+	<classpathentry kind="lib" path="D:/tomcat7.0.72/apache-tomcat-7.0.72/lib/tomcat-i18n-fr.jar"/>
+	<classpathentry kind="lib" path="D:/tomcat7.0.72/apache-tomcat-7.0.72/lib/tomcat-i18n-ja.jar"/>
+	<classpathentry kind="lib" path="D:/tomcat7.0.72/apache-tomcat-7.0.72/lib/tomcat-jdbc.jar"/>
+	<classpathentry kind="lib" path="D:/tomcat7.0.72/apache-tomcat-7.0.72/lib/tomcat-util.jar"/>
+	<classpathentry kind="lib" path="D:/tomcat7.0.72/apache-tomcat-7.0.72/lib/websocket-api.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
