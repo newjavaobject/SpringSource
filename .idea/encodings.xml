@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-jdbc/3.2.18.RELEASE/spring-jdbc-3.2.18.RELEASE-sources.jar!/org/springframework/jdbc/core/JdbcTemplate.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+  </component>
+</project>
