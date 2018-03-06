@@ -21,6 +21,7 @@ public class SpringTest {
 		BeanFactory bf = new XmlBeanFactory(new ClassPathResource("spring-servlet.xml"));
 //		Test1 test1 = bf.getBean(Test1.class);
 		Test1 test11 = (Test1) bf.getBean("test1");
+		bf.getBean("org.springframework.aop.config.internalAutoProxyCreator");
 		System.out.println(test11.getTest());
 		
 //		ApplicationContext ac = new ClassPathXmlApplicationContext("spring-servlet.xml");
@@ -30,15 +31,15 @@ public class SpringTest {
 	
 	@SuppressWarnings({ "resource", "unused" })
 	public static void main(String[] args) {
-		BeanFactory bf = new XmlBeanFactory(new ClassPathResource("spring-servlet.xml"));
-		Test1 test1 = bf.getBean(Test1.class);
-		Test1 Test11 = (Test1) bf.getBean("test1");
-		System.out.println(test1.getTest());
+//		BeanFactory bf = new XmlBeanFactory(new ClassPathResource("spring-servlet.xml"));
+//		Test1 test1 = bf.getBean(Test1.class);
+//		Test1 Test11 = (Test1) bf.getBean("test1");
+//		System.out.println(test1.getTest());
 		
 		ApplicationContext ac = new ClassPathXmlApplicationContext("spring-servlet.xml");
 		Test1 test12 = (Test1) ac.getBean("test1");
 		System.out.println(test12.getTest());
 //		User user = (User) bf.getBean("uu");
-//		System.out.println(user.getEmail());
+//		System.out.println(user.getEmail()); singletonObjects \
 	}
 }

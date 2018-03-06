@@ -24,18 +24,19 @@ public class Test1 {
 		final WebClient webClient = new WebClient();
 		webClient.getOptions().setThrowExceptionOnScriptError(false);
 		final HtmlPage page = webClient.getPage("http://www.sc.10086.cn/service/index.html?ts=1510622955236");
-		
+
 		final String pageAsXml = page.asXml();
 		System.out.println(pageAsXml);
-		
-		
+
+
 		HttpClient hc = HttpClientBuilder.create().build();
 		HttpGet httpGet = new HttpGet("http://www.sc.10086.cn/service/index.html?ts=1510622955236");
 		HttpResponse response = hc.execute(httpGet);
-		
+
 		System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
-//		System.out.println(EntityUtils.toString(response.getEntity()));
 		httpGet.releaseConnection();
+
+
 //		Assert.assertTrue(pageAsXml.contains("<body class=\"composite\">"));
 
 //		final String pageAsText = page.asText();
