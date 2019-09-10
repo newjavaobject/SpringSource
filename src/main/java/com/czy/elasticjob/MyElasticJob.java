@@ -19,9 +19,18 @@ import java.util.Date;
  */
 public class MyElasticJob implements SimpleJob {
     public void execute(ShardingContext shardingContext) {
-        System.out.println(String.format("线程[%s]:时间[%s]",
-                Thread.currentThread().getName(),
-                new SimpleDateFormat("yyyy年MM月dd日 HH时mm分ss秒").format(new Date())));
+        switch (shardingContext.getShardingItem()) {
+            case 0:
+                System.out.println(0);break;
+            case 2:
+                System.out.println(2);break;
+            case 1:
+                System.out.println(1);break;
+        }
+//        System.out.println(String.format("线程[%s]:时间[%s]",
+//                Thread.currentThread().getName(),
+//                new SimpleDateFormat("yyyy年MM月dd日 HH时mm分ss秒").format(new Date())));
+//        System.out.println(getClass().getName());
     }
 
     public static void main(String[] args) {
@@ -29,7 +38,7 @@ public class MyElasticJob implements SimpleJob {
     }
 
     private static CoordinatorRegistryCenter createRegistryCenter() {
-        ZookeeperConfiguration zookeeperConfiguration = new ZookeeperConfiguration("localhost:2181", "elastic-job");
+        ZookeeperConfiguration zookeeperConfiguration = new ZookeeperConfiguration("localhost:2181", "elastic-job1");
         CoordinatorRegistryCenter regCenter = new ZookeeperRegistryCenter(zookeeperConfiguration);
         regCenter.init();
         return regCenter;
@@ -37,7 +46,10 @@ public class MyElasticJob implements SimpleJob {
 
     private static LiteJobConfiguration createJobConfiguration() {
         // 定义作业核心配置
-        JobCoreConfiguration simpleCoreConfig = JobCoreConfiguration.newBuilder("demoSimpleJob", "0/5 * * * * ?", 1).build();
+        JobCoreConfiguration simpleCoreConfig = JobCoreConfiguration
+                .newBuilder("demoSimpleJob", "0/5 * * * * ?", 3)
+                .shardingItemParameters("0=0,1=1,2=2")
+                .build();
         // 定义SIMPLE类型配置
         SimpleJobConfiguration simpleJobConfig = new SimpleJobConfiguration(simpleCoreConfig, MyElasticJob.class.getCanonicalName());
         // 定义Lite作业根配置
