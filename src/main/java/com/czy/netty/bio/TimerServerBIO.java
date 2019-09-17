@@ -1,8 +1,9 @@
 package com.czy.netty.bio;
 
-import java.io.IOException;
+import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.Date;
 
 /**
  * SpringSource:com.czy.netty.bio.TimerServerBIO.java
@@ -42,10 +43,36 @@ class TimerServerHandler implements Runnable {
 		this.socket = socket;
 	}
 	public void run() {
+        BufferedReader reader = null;
+        PrintWriter pw = null;
 		try {
-			socket.getInputStream();
-		} catch (IOException e) {
+			reader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+            pw = new PrintWriter(socket.getOutputStream(), true);
+            String body = null;
+            while (true) {
+                body = reader.readLine();
+                if (body == null) break;
+                System.out.println("接收到消息：" + body);
+                pw.println(new Date());
+            }
+        } catch (IOException e) {
 			e.printStackTrace();
-		}
-	}
+		} finally {
+		    if (reader != null)
+                try {
+                    reader.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            if (pw != null)
+                pw.close();
+		    if (socket != null)
+                try {
+                    socket.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            socket = null;
+        }
+    }
 }
